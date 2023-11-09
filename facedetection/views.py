@@ -84,8 +84,7 @@ def detect_faces_and_embeddings(image_data):
 
         rgb_face_img = Image.fromarray(face_img).convert('RGB')
         rgb_face_array = np.array(rgb_face_img)
-
-        # Calculate face encodings
+        
         face_encoding = face_recognition.face_encodings(rgb_face_array)
 
         if face_encoding:
