@@ -5,6 +5,15 @@ class Course(models.Model):
     Course_name = models.CharField(max_length=50)
     Course_Code = models.CharField(max_length=10)
     students = models.ManyToManyField('Students', blank=True)
+    attendece_count = models.IntegerField(default=0)
+    def attendance_percentage(self, student):
+        total_classes = self.attendece_count
+        if total_classes == 0:
+            return 0  # Avoid division by zero
+        attendance_entries = self.attendance_set.filter(student=student, attendance=True)
+        attendance_count = attendance_entries.count()
+        percentage = (attendance_count / total_classes) * 100
+        return round(percentage, 2)
     def __str__(self):
         return self.Course_name
 
