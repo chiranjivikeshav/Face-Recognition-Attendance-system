@@ -15,6 +15,7 @@ This Face Recognition Attendance System is a Django-based web application that l
 
 1. Clone the repository:
 
+   ```bash
    git clonehttps://github.com/chiranjivikeshav/Face-Recognition-Attendance-system.git
 2. Navigate to the project directory:
 
