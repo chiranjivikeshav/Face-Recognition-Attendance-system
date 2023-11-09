@@ -15,5 +15,23 @@ This Face Recognition Attendance System is a Django-based web application that l
 
 1. Clone the repository:
 
+   git clonehttps://github.com/chiranjivikeshav/Face-Recognition-Attendance-system.git
+2. Navigate to the project directory:
+
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   cd Face-Recognition-Attendance-system
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+3. Apply database migrations:
+
+   ```bash
+   python manage.py migrate
+
+## Usage
+
+1. Run the development server:
+
+   ```bash
+   python manage.py runserver
